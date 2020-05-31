@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * This class contains multiple solution to the recurring character in a given string problem
+ * This class contains multiple solution to find the first recurring character in a given string problem
  * @author sushma
  *
  */
