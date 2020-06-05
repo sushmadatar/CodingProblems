@@ -6,7 +6,7 @@ import org.junit.runner.notification.Failure;
 public class TestRunner {
 
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(RecurringCharacterTest.class);
+		Result result = JUnitCore.runClasses();
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
 		}

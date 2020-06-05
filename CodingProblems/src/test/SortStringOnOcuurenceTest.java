@@ -26,18 +26,20 @@ public class SortStringOnOcuurenceTest {
 	 
 	
 	@Parameterized.Parameters
-	public static Collection inputStrings() {
+	public static Collection testData() {
 		return Arrays.asList(new Object[][] {
-			{"tweet", "tteew"},
-			{"abcdef", "abcdef"},
-			{"",""}
+			{ "tweet", "tteew" },
+			{ "abcdef", "abcdef" },
+			{ "","" },
+			{ null, null },
+			{ "a b c d e", "    abcde"}
 		});
 	}
 	
 	@Test
-	public void SortRecurring() {
+	public void SortStringOnRecurringCharacterOccurenceTest() {
 		String actualOutput;
-		actualOutput = SortStringOnOcuurence.SortedSolution1(inputString);
+		actualOutput = SortStringOnOcuurence.sortStringOnRecurringCharacterOccurence(inputString);
 		assertEquals(actualOutput, expectedOutput);
 	}
 

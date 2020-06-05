@@ -1,16 +1,20 @@
+/**
+ *  Given a string, return the first recurring character in it, or null if there is no recurring character.
+ *  For example, given the string "acbbac", return "b". Given the string "abcdef", return null.
+ */
+
 package problems;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * This class contains multiple solutions to find the first recurring character in a given string problem
- * @author sushma
- *
- */
 public class RecurringCharacter {
 	
-	public static Character getRecurringCharSolution1(String input) {
+	public static Character getRecurringCharUsingNoExtraMemory(String input) {
+		
+		if (input == null || input.length() == 0)
+			return null;
+		
 		for (int i = 0; i < input.length(); i++) {
 			if (input.lastIndexOf(input.charAt(i), i - 1) != -1) {
 				return Character.valueOf(input.charAt(i));
@@ -19,9 +23,13 @@ public class RecurringCharacter {
 		return null;
 	}
 
-	public static Character getRecurringCharSolution2(String input) {
+	public static Character getRecurringCharUsingCharArray(String input) {
 
+		if (input == null || input.length() == 0)
+			return null;
+		
 		char[] characters = new char[256];
+
 		for (int i = 0; i < input.length(); i++) {
 			if (characters[input.charAt(i)] == 1) {
 				return Character.valueOf(input.charAt(i));
@@ -32,8 +40,13 @@ public class RecurringCharacter {
 		return null;
 	}
 
-	public static Character getRecurringCharSolution3(String input) {
+	public static Character getRecurringCharUsingHashMap(String input) {
+		
+		if (input == null || input.length() == 0)
+			return null;
+		
 		HashMap<Character, Integer> map = new HashMap<>();
+		
 		for (int i = 0; i < input.length(); i++) {
 			if (map.containsKey(Character.valueOf(input.charAt(i)))) {
 				return Character.valueOf(input.charAt(i));
@@ -44,16 +57,20 @@ public class RecurringCharacter {
 		return null;
 	}
 
-	public static Character getRecurringCharSolution4(String input) {
-		ArrayList<Character> duplicates = new ArrayList<Character>();
+	public static Character getRecurringCharUsingArrayList(String input) {
+		
+		if (input == null || input.length() == 0)
+			return null;
+		
+		ArrayList<Character> characterList = new ArrayList<Character>();
+		
 		for (int i = 0; i < input.length(); i++) {
-			if (duplicates.contains(Character.valueOf(input.charAt(i)))) {
+			if (characterList.contains(Character.valueOf(input.charAt(i)))) {
 				return Character.valueOf(input.charAt(i));
 			} else {
-				duplicates.add(Character.valueOf(input.charAt(i)));
+				characterList.add(Character.valueOf(input.charAt(i)));
 			}
 		}
 		return null;
 	}
-
 }

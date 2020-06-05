@@ -26,40 +26,41 @@ public class RecurringCharacterTest {
 	 
 	
 	@Parameterized.Parameters
-	public static Collection inputStrings() {
+	public static Collection testData() {
 		return Arrays.asList(new Object[][] {
 			{"acbbda", 'b'},
 			{"abcdef", null},
-			{"%c%dde",'a'},
-			{"",null}
+			{"%c%dde",'%'},
+			{"",null},
+			{null, null}
 		});
 	}
 	
 	@Test
-	public void RecurringCharacterSolution1Test() {
+	public void getRecurringCharacterUsingNoExtraMemoryTest() {
 		Character actualOutput;
-		actualOutput = RecurringCharacter.getRecurringCharSolution1(inputString);
+		actualOutput = RecurringCharacter.getRecurringCharUsingNoExtraMemory(inputString);
 		assertEquals(actualOutput, expectedOutput);
 	}
 	
 	@Test
-	public void RecurringCharacterSolution2Test() {
+	public void getRecurringCharacterUsingCharArrayTest() {
 		Character actualOutput;
-		actualOutput = RecurringCharacter.getRecurringCharSolution2(inputString);
+		actualOutput = RecurringCharacter.getRecurringCharUsingCharArray(inputString);
 		assertEquals(actualOutput, expectedOutput);
 	}
 	
 	@Test
-	public void RecurringCharacterSolution3Test() {
+	public void getRecurringCharacterUsingHashMapTest() {
 		Character actualOutput;
-		actualOutput = RecurringCharacter.getRecurringCharSolution3(inputString);
+		actualOutput = RecurringCharacter.getRecurringCharUsingHashMap(inputString);
 		assertEquals(actualOutput, expectedOutput);
 	}
 	
 	@Test
-	public void RecurringCharacterSolution4Test() {
+	public void getRecurringCharacterUsingArrayListTest() {
 		Character actualOutput;
-		actualOutput = RecurringCharacter.getRecurringCharSolution4(inputString);
+		actualOutput = RecurringCharacter.getRecurringCharUsingArrayList(inputString);
 		assertEquals(actualOutput, expectedOutput);
 	}
 
