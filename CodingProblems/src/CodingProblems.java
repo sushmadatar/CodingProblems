@@ -1,3 +1,4 @@
+import problems.FindIndexOfSubstring;
 import problems.LongestConsecutiveCountBinary;
 import problems.Palindrome;
 import problems.RecurringCharacter;
@@ -5,7 +6,7 @@ import problems.SortStringOnOcuurence;
 
 public class CodingProblems {
 	public static void main(String[] args) {
-		//String input = args[0];
+		// String input = args[0];
 		// Output for Recurring character from a string
 		// System.out.println("Solution 1 Duplicate character is: " +
 		// RecurringCharacter.getRecurringCharSolution1(input));
@@ -19,7 +20,8 @@ public class CodingProblems {
 		// System.out.println(SortStringOnOcuurence.SortedSolution1("tweet"));
 		// Palindrome.isPalindrome(121);
 
-		System.out.print(LongestConsecutiveCountBinary.getLongestConsecutiveOneConuntUsingBinaryString(156));
+		// System.out.print(LongestConsecutiveCountBinary.getLongestConsecutiveOneConuntUsingBinaryString(156));
+		FindIndexOfSubstring.findSubstringIndexCustomImplementaion("abra ka dabra", "a");
 	}
 
 }
