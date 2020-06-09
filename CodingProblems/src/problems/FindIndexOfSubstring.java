@@ -3,6 +3,9 @@ package problems;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Find start index of all substring occurring in a given string input
+ */
 public class FindIndexOfSubstring {
 
 	public static List<Integer> findSubstringIndexUsingCollectionsApi(String inputText, String substring) {
