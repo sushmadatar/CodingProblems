@@ -21,7 +21,7 @@ public class CodingProblems {
 		// Palindrome.isPalindrome(121);
 
 		// System.out.print(LongestConsecutiveCountBinary.getLongestConsecutiveOneConuntUsingBinaryString(156));
-		FindIndexOfSubstring.findSubstringIndexCustomImplementaion("abra ka dabra", "a");
+		FindIndexOfSubstring.findSubstringIndexUsingRegex("abra$ aba$", "$");
 	}
 
 }
