@@ -3,7 +3,7 @@ package problems;
 import java.util.ArrayList;
 
 /*
- * Given a list of integers  and a noumber k return which contiguous of the list um to k
+ * Given a list of integers  and a number k return which contiguous of the list um to k
  * Example {1,2,3,4,5} k=9 Output {2,3,4}
  */
 public class FindAdditionOfNumberToK {
