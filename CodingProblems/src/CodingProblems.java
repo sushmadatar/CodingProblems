@@ -1,8 +1,7 @@
-import problems.FindIndexOfSubstring;
-import problems.LongestConsecutiveCountBinary;
-import problems.Palindrome;
-import problems.RecurringCharacter;
-import problems.SortStringOnOcuurence;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import problems.FindAdditionOfNumberToK;
 
 public class CodingProblems {
 	public static void main(String[] args) {
@@ -21,7 +20,11 @@ public class CodingProblems {
 		// Palindrome.isPalindrome(121);
 
 		// System.out.print(LongestConsecutiveCountBinary.getLongestConsecutiveOneConuntUsingBinaryString(156));
-		FindIndexOfSubstring.findSubstringIndexUsingRegex("abra$ aba$", "$");
+		ArrayList<Integer> input = new ArrayList<Integer>(Arrays.asList( 1, 2, 3, 4, 5 ));
+		ArrayList<Integer> output = FindAdditionOfNumberToK.findAdditionOfNumberToKClean(input, 9);
+		for (int i = 0; i < output.size(); i++) {
+			System.out.println(output.get(i));
+		}
 	}
 
 }
